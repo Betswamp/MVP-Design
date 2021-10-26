@@ -758,3 +758,262 @@ footer {
   right: -10px;
   top: 22px;
 }
+
+#admin-navbar-nav a {
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.my-bet-slide {
+  width: 550px;
+  height: 65vh;
+  background: #151515;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index: 99999;
+  right: 10%;
+  overflow: auto;
+}
+.my-bet-slide::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.my-bet-slide::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.my-bet-slide::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+/* Handle on hover */
+.my-bet-slide::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.my-bet-slide .btn {
+  background: #0f0f0f;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0px 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #aaaaaa;
+
+  padding: 10px 2rem;
+  text-align: center;
+}
+.my-bet-slide .btn.active {
+  color: #ffffff;
+  border-bottom: 0;
+}
+.btn-check:focus + .btn,
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 0%);
+}
+.nav-tabs-data {
+  background: #0f0f0f;
+  width: 100%;
+}
+.nav-tabs-data .bet-card-custom {
+  background: #151515;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px;
+}
+.nav-tabs-data .bet-card-custom h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.nav-tabs-data .bet-card-custom p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #aaaaaa;
+}
+.nav-tabs-data h5 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #aaaaaa;
+}
+.nav-tabs-data hr {
+  border: 1px solid #232323;
+}
+.history-list p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: #aaaaaa;
+}
+.history-list h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+.rotate-element {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.my-wallet-slide {
+  width: 550px;
+  height: auto;
+  background: #151515;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index: 99999;
+  right: 10%;
+  overflow: auto;
+  right: 1.5%;
+}
+.my-wallet-slide::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.my-wallet-slide::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.my-wallet-slide::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+/* Handle on hover */
+.my-wallet-slide::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.my-wallet-slide .wallet-info {
+  background: #0f0f0f;
+}
+.my-wallet-slide .wallet-info .wallet-card {
+  background: #0f0f0f;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.wallet-card p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #aaaaaa;
+  font-family: "Montserrat", sans-serif;
+}
+.wallet-card h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+.wallet-card h4 img {
+  vertical-align: middle;
+}
+.wallet-card h2 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+.point-list h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+.point-list hr {
+  border: 1px solid #232323;
+  margin: 0;
+}
+.point-list-data p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #aaaaaa;
+}
+.point-list-data h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.point-list-form p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #aaaaaa;
+}
+.point-list-form input {
+  width: 100%;
+  height: 64px;
+  background: #151515;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #ffffff;
+}
+.point-list-form span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #aaaaaa;
+  right: 15px;
+  top: 22px;
+}
+.point-list-form .btn {
+  width: 100%;
+  height: 74px;
+  left: 43px;
+  background: #ff0000;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #232323;
+}
+.point-list-form .btn.grey {
+  background: #757575;
+}

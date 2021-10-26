@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import AppHeader from "../../components/Elements/AppHeader";
 import AOS from "aos";
 import "aos/dist/aos.css";
 //images
@@ -39,6 +40,7 @@ class Index extends Component {
   render() {
     return (
       <Fragment>
+          <AppHeader />
         <div className="container-fluid px-md-5 px-2 mt-2">
           <div className="space-100"></div>
           <div className="d-flex flex-wrap">
