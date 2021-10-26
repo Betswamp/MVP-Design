@@ -1,0 +1,268 @@
+@media screen and (max-width: 320px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 1024px) {
+  .space-100 {
+    height: 10px;
+  }
+  #section-home h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #section-home p {
+    font-size: 12px;
+    text-align: center;
+    font-family: "Montserrat";
+  }
+  .game-card .team-name {
+    font-size: 14px;
+  }
+  .game-card h3 {
+    font-size: 14px;
+  }
+  .game-card h5 {
+    font-size: 12px;
+  }
+  .game-card button {
+    height: 30px;
+    width: 100%;
+    line-height: 1;
+  }
+  #section-validate h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #section-validate p {
+    font-size: 12px;
+    text-align: center;
+    margin: 2rem 0px;
+  }
+  #section-validate .img-fluid {
+    margin: 4rem 0px;
+  }
+  #section-bet-on h1 {
+    font-size: 3rem;
+  }
+  .social-icons img {
+    width: 20px;
+  }
+  .tab-view-card {
+    width: 80px;
+  }
+  .admin-match-button {
+    width: 100%;
+    font-size: 12px;
+    height: 40px;
+    float: left;
+  }
+  .nav-scroller-games {
+    height: 7rem;
+  }
+  .admin-form input {
+    height: 45px;
+    width: 100%;
+  }
+  .admin-form select {
+    height: 45px;
+    width: 100%;
+  }
+  .admin-form button {
+    height: 45px;
+    width: 100%;
+  }
+  .admin-form label {
+    font-size: 16px;
+  }
+  .admin-form p {
+    font-size: 16px;
+  }
+  .admin-card-view {
+    width: 100%;
+  }
+  .admin-form img {
+    bottom: 15px;
+  }
+  .maindiv {
+    width: 100%;
+  }
+  .sidebar .data-list {
+    width: 100% !important;
+   
+  }
+  .data-list .image-card .team-name {
+    font-size: 18px;
+  }
+  .data-list .image-card p {
+    font-size: 16px;
+  }
+  .data-list .image-card h3 {
+    font-size: 18px;
+  }
+  .data-list .image-card h5 {
+    line-height: 16px;
+  }
+  .odds-card h4 {
+    font-size: 18px;
+  }
+  .odds-card .info p {
+    font-size: 16px;
+  }
+  .odds-card .info span {
+    font-size: 16px;
+  }
+  .odds-card .info .percent {
+    font-size: 18px;
+  }
+  .odds-card .form input {
+    width: 100%;
+  }
+  .odds-card .form .max-btn {
+    right: 10px;
+  }
+  .odds-card .form p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1200px) {
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/**********
+    iPad 3
+    **********/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */
+}
