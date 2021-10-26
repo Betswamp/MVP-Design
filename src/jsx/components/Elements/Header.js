@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import logo from '../../../images/logo.png';
+import { NavLink } from "react-router-dom";
 class Header extends Component {
     render() {
         return (
@@ -14,7 +15,7 @@ class Header extends Component {
                             <li className="nav-item px-3"><a href="#" className="nav-link" >About</a></li>
                             <li className="nav-item px-3"><a href="#" className="nav-link">News</a></li>
                             <li className="nav-item px-3">
-                                <a href="#" className="btn btn-md theam-bg-red">Launch app</a>
+                                <NavLink href="#" className="btn btn-md theam-bg-red" to="/app">Launch app</NavLink>
                             </li>
                         </ul>
                     </header>

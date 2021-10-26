@@ -133,6 +133,11 @@
   .odds-card .form p {
     font-size: 16px;
   }
+  #admin-navbar-nav{
+    justify-content: end;
+    align-items: end;
+  }
+ 
 }
 @media screen and (max-width: 1200px) {
 }

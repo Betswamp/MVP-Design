@@ -758,3 +758,13 @@ footer {
   right: -10px;
   top: 22px;
 }
+
+#admin-navbar-nav a{
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  cursor: pointer;
+}

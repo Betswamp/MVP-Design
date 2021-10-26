@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import GameCard from "../../components/Cards/GameCard";
+import AppHeader from "../../components/Elements/AppHeader";
 //images
 import monotone_soccer from "../../../images/emojione-monotone_soccer-ball.png";
 import park_rugby from "../../../images/icon-park_rugby.png";
@@ -18,7 +19,7 @@ class Index extends Component {
       activeTabBottom: 1,
     };
   }
-  componentDidMount = () => {};
+  componentDidMount = () => { };
 
   getGameCard = () => {
     let items = [];
@@ -47,171 +48,164 @@ class Index extends Component {
   render() {
     return (
       <Fragment>
+        <AppHeader />
         <div className="container-fluid px-md-5 px-2">
           <p className="mt-2 mt-md-4 text-white">#Sports</p>
           <div className="nav-scroller-games">
-          <div className="d-flex mt-2 mt-md-4 games-scroll">
-            <div className="pe-2 pe-md-5">
-              <div
-                className={`text-center tab-view-card p-3 ${
-                  this.state.activeTabTop == 1 ? "active" : ""
-                }`}
-                onClick={() => this.handelGamesTab(1)}
-              >
-                <img src={monotone_soccer} />
-                <p
-                  className="text-white m-0 mt-1 mt-md-3"
-                  data-bs-toggle="collapse"
-                  href="#collapseSoccer"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseSoccer"
+            <div className="d-flex mt-2 mt-md-4 games-scroll">
+              <div className="pe-2 pe-md-5">
+                <div
+                  className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 1 ? "active" : ""
+                    }`}
+                  onClick={() => this.handelGamesTab(1)}
                 >
-                  Soccer
-                </p>
+                  <img src={monotone_soccer} />
+                  <p
+                    className="text-white m-0 mt-1 mt-md-3"
+                    data-bs-toggle="collapse"
+                    href="#collapseSoccer"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseSoccer"
+                  >
+                    Soccer
+                  </p>
+                </div>
+              </div>
+              <div className="pe-2 pe-md-5">
+                <div
+                  className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 2 ? "active" : ""
+                    }`}
+                  onClick={() => this.handelGamesTab(2)}
+                >
+                  <img src={park_rugby} />
+                  <p
+                    className="text-white m-0 mt-1 mt-md-3"
+                    data-bs-toggle="collapse"
+                    href="#collapseSoccer"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseSoccer"
+                  >
+                    Rugby
+                  </p>
+                </div>
+              </div>
+              <div className="pe-2 pe-md-5">
+                <div
+                  className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 3 ? "active" : ""
+                    }`}
+                  onClick={() => this.handelGamesTab(3)}
+                >
+                  <img src={monotone_tennis} />
+                  <p
+                    className="text-white m-0 mt-1 mt-md-3"
+                    data-bs-toggle="collapse"
+                    href="#collapseSoccer"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseSoccer"
+                  >
+                    Tennis
+                  </p>
+                </div>
+              </div>
+              <div className="pe-2 pe-md-5">
+                <div
+                  className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 4 ? "active" : ""
+                    }`}
+                  onClick={() => this.handelGamesTab(4)}
+                >
+                  <img src={monotone_racing} width="40px" />
+                  <p
+                    className="text-white m-0 mt-1 mt-md-3"
+                    data-bs-toggle="collapse"
+                    href="#collapseRacing"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseRacing"
+                  >
+                    F1 Racing
+                  </p>
+                </div>
+              </div>
+              <div className="pe-2 pe-md-5">
+                <div
+                  className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 5 ? "active" : ""
+                    }`}
+                  onClick={() => this.handelGamesTab(5)}
+                >
+                  <img src={monotone_boxing} width="30px" />
+                  <p
+                    className="text-white m-0 mt-1 mt-md-3"
+                    data-bs-toggle="collapse"
+                    href="#collapseBoxing"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseBoxing"
+                  >
+                    Boxing
+                  </p>
+                </div>
+              </div>
+              <div className="pe-2 pe-md-5">
+                <div
+                  className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 6 ? "active" : ""
+                    }`}
+                  onClick={() => this.handelGamesTab(6)}
+                >
+                  <img src={monotone_basketball} width="30px" />
+                  <p
+                    className="text-white m-0 mt-1 mt-md-3"
+                    data-bs-toggle="collapse"
+                    href="#collapseBasketball"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseBasketball"
+                  >
+                    Basketball
+                  </p>
+                </div>
+              </div>
+              <div className="pe-2 pe-md-5">
+                <div
+                  className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 7 ? "active" : ""
+                    }`}
+                  onClick={() => this.handelGamesTab(7)}
+                >
+                  <img src={cil_baseball} width="30px" />
+                  <p
+                    className="text-white m-0 mt-1 mt-md-3"
+                    data-bs-toggle="collapse"
+                    href="#collapseBaseball"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseBaseball"
+                  >
+                    Baseball
+                  </p>
+                </div>
+              </div>
+              <div className="pe-2 pe-md-5">
+                <div
+                  className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 8 ? "active" : ""
+                    }`}
+                  onClick={() => this.handelGamesTab(8)}
+                >
+                  <img src={cil_cricket} width="30px" />
+                  <p
+                    className="text-white m-0 mt-1 mt-md-3"
+                    data-bs-toggle="collapse"
+                    href="#collapseCricket"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseCricket"
+                  >
+                    Cricket
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="pe-2 pe-md-5">
-              <div
-                className={`text-center tab-view-card p-3 ${
-                  this.state.activeTabTop == 2 ? "active" : ""
-                }`}
-                onClick={() => this.handelGamesTab(2)}
-              >
-                <img src={park_rugby} />
-                <p
-                  className="text-white m-0 mt-1 mt-md-3"
-                  data-bs-toggle="collapse"
-                  href="#collapseSoccer"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseSoccer"
-                >
-                  Rugby
-                </p>
-              </div>
-            </div>
-            <div className="pe-2 pe-md-5">
-              <div
-                className={`text-center tab-view-card p-3 ${
-                  this.state.activeTabTop == 3 ? "active" : ""
-                }`}
-                onClick={() => this.handelGamesTab(3)}
-              >
-                <img src={monotone_tennis} />
-                <p
-                  className="text-white m-0 mt-1 mt-md-3"
-                  data-bs-toggle="collapse"
-                  href="#collapseSoccer"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseSoccer"
-                >
-                  Tennis
-                </p>
-              </div>
-            </div>
-            <div className="pe-2 pe-md-5">
-              <div
-                className={`text-center tab-view-card p-3 ${
-                  this.state.activeTabTop == 4 ? "active" : ""
-                }`}
-                onClick={() => this.handelGamesTab(4)}
-              >
-                <img src={monotone_racing} width="40px" />
-                <p
-                  className="text-white m-0 mt-1 mt-md-3"
-                  data-bs-toggle="collapse"
-                  href="#collapseRacing"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseRacing"
-                >
-                  F1 Racing
-                </p>
-              </div>
-            </div>
-            <div className="pe-2 pe-md-5">
-              <div
-                className={`text-center tab-view-card p-3 ${
-                  this.state.activeTabTop == 5 ? "active" : ""
-                }`}
-                onClick={() => this.handelGamesTab(5)}
-              >
-                <img src={monotone_boxing} width="30px" />
-                <p
-                  className="text-white m-0 mt-1 mt-md-3"
-                  data-bs-toggle="collapse"
-                  href="#collapseBoxing"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseBoxing"
-                >
-                  Boxing
-                </p>
-              </div>
-            </div>
-            <div className="pe-2 pe-md-5">
-              <div
-                className={`text-center tab-view-card p-3 ${
-                  this.state.activeTabTop == 6 ? "active" : ""
-                }`}
-                onClick={() => this.handelGamesTab(6)}
-              >
-                <img src={monotone_basketball} width="30px" />
-                <p
-                  className="text-white m-0 mt-1 mt-md-3"
-                  data-bs-toggle="collapse"
-                  href="#collapseBasketball"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseBasketball"
-                >
-                  Basketball
-                </p>
-              </div>
-            </div>
-            <div className="pe-2 pe-md-5">
-              <div
-                className={`text-center tab-view-card p-3 ${
-                  this.state.activeTabTop == 7 ? "active" : ""
-                }`}
-                onClick={() => this.handelGamesTab(7)}
-              >
-                <img src={cil_baseball} width="30px" />
-                <p
-                  className="text-white m-0 mt-1 mt-md-3"
-                  data-bs-toggle="collapse"
-                  href="#collapseBaseball"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseBaseball"
-                >
-                  Baseball
-                </p>
-              </div>
-            </div>
-            <div className="pe-2 pe-md-5">
-              <div
-                className={`text-center tab-view-card p-3 ${
-                  this.state.activeTabTop == 8 ? "active" : ""
-                }`}
-                onClick={() => this.handelGamesTab(8)}
-              >
-                <img src={cil_cricket} width="30px" />
-                <p
-                  className="text-white m-0 mt-1 mt-md-3"
-                  data-bs-toggle="collapse"
-                  href="#collapseCricket"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseCricket"
-                >
-                  Cricket
-                </p>
-              </div>
-            </div>
-          </div>
           </div>
         </div>
 
@@ -220,9 +214,8 @@ class Index extends Component {
           <div className="d-flex flex-wrap">
             <div className="me-md-4 me-2">
               <button
-                className={`btn admin-match-button ${
-                  this.state.activeTabBottom == 1 ? " active" : ""
-                }`}
+                className={`btn admin-match-button ${this.state.activeTabBottom == 1 ? " active" : ""
+                  }`}
                 onClick={() => this.handelMatchTab(1)}
               >
                 Matched events
@@ -230,9 +223,8 @@ class Index extends Component {
             </div>
             <div className="">
               <button
-                className={`btn admin-match-button ${
-                  this.state.activeTabBottom == 2 ? " active" : ""
-                }`}
+                className={`btn admin-match-button ${this.state.activeTabBottom == 2 ? " active" : ""
+                  }`}
                 onClick={() => this.handelMatchTab(2)}
               >
                 Un-Matched Events
