@@ -98,7 +98,6 @@
   }
   .sidebar .data-list {
     width: 100% !important;
-   
   }
   .data-list .image-card .team-name {
     font-size: 18px;
@@ -132,6 +131,22 @@
   }
   .odds-card .form p {
     font-size: 16px;
+  }
+  #admin-navbar-nav {
+    justify-content: end;
+    align-items: end;
+  }
+  .my-wallet-slide {
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: 0;
+  }
+  .my-bet-slide {
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: 0;
   }
 }
 @media screen and (max-width: 1200px) {
