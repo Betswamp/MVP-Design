@@ -414,7 +414,7 @@ class Index extends Component {
                     <Carousel
                         swipeable={true}
                         draggable={true}
-                        arrows={false}
+                        arrows={true}
                         showDots={false}
                         responsive={this.state.responsive}
                         ssr={true} // means to render carousel on server-side.
