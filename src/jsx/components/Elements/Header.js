@@ -8,11 +8,13 @@ class Header extends Component {
                 <div className="container-fluid theam-bg-dark">
                     <header className="d-flex flex-wrap justify-content-center home-header">
                         <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                            <img src={logo} width="90" className="py-1"/>
+                            <img src={logo} width="90" className="py-1" />
                         </a>
 
                         <ul className="nav nav-pills pt-0 mt-0 pt-md-4 mt-md-2 justify-content-center justify-content-sm-end">
-                            <li className="nav-item px-3"><a href="#" className="nav-link" >About</a></li>
+                            <li className="nav-item px-3">
+                                <NavLink to="/about" className="nav-link" >About</NavLink>
+                            </li>
                             <li className="nav-item px-3"><a href="#" className="nav-link">News</a></li>
                             <li className="nav-item px-3">
                                 <NavLink href="#" className="btn btn-md theam-bg-red" to="/app">Launch app</NavLink>

@@ -1017,3 +1017,102 @@ footer {
 .point-list-form .btn.grey {
   background: #757575;
 }
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: transparent;
+}
+#about-section-1 h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  color: #ffffff;
+}
+#about-section-1 p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+
+  color: #ffffff;
+}
+#about-section-2 .about-card {
+  background: #0f0f0f;
+  border: 1px solid #232323;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+#about-section-2 .about-card h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ff0000;
+}
+#about-section-2 .about-card p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+#about-section-3 h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  color: #ffffff;
+}
+#about-section-3 .form-check-input:checked {
+  background-color: #ff0000 !important;
+  border-color: #ff0000;
+  box-shadow: none !important;
+}
+#about-section-3 .form-check-input[type="radio"] {
+  border-radius: 50%;
+  background: #232323;
+  box-shadow: inset 0px 4px 4px #000000;
+  height: 26px;
+  width: 26px;
+}
+#about-section-3 .form-check-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-left: 1.5rem;
+}
+#about-section-4 h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  color: #ffffff;
+}
+#about-section-5 h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 100px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+#about-section-5 h3 span {
+  color: #ff0303;
+}
+#about-section-5 button {
+  background: #ff0000;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  height: 60px;
+  width: 604px;
+  color: #0f0f0f;
+}
+#about-section-6 h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  color: #ffffff;
+}

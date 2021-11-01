@@ -6,6 +6,7 @@ import SideBar from '../jsx/components/Elements/SideBar';
 import Home from '../jsx/pages/Home/Index';
 import App from '../jsx/pages/App/Index';
 import Admin from '../jsx/pages/Admin/Index';
+import About from '../jsx/pages/About/Index';
 class Web extends Component {
     render() {
         return (
@@ -27,6 +28,11 @@ class Web extends Component {
                             exact
                             path="/admin"
                             component={Admin}
+                        />
+                        <Route
+                            exact
+                            path="/about"
+                            component={About}
                         />
                     </Switch>
                 </BrowserRouter>
