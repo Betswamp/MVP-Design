@@ -49,7 +49,7 @@ class Index extends Component {
     return (
       <Fragment>
         <AppHeader />
-        <div className="container-fluid px-md-5 px-2">
+        <div className="container-fluid px-md-5">
           <p className="mt-2 mt-md-4 text-white">#Sports</p>
           <div className="nav-scroller-games">
             <div className="d-flex mt-2 mt-md-4 games-scroll">
@@ -209,7 +209,7 @@ class Index extends Component {
           </div>
         </div>
 
-        <div className="container-fluid px-md-5 px-2 mt-2">
+        <div className="container-fluid px-md-5 mt-2">
           <div className="space-100"></div>
           <div className="d-flex flex-wrap">
             <div className="me-md-4 me-2">

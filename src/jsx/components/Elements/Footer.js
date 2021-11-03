@@ -13,7 +13,7 @@ class Footer extends Component {
     render() {
         return (
             <Fragment>
-                <footer className="container-fluid px-2 px-md-5 py-0 py-md-5" style={{ backgroundImage: `url(${logoFooter})` }}>
+                <footer className="container-fluid px-md-5 py-0 py-md-5" style={{ backgroundImage: `url(${logoFooter})` }}>
                     <div className="space-100"></div>
 
                     <div className="row">

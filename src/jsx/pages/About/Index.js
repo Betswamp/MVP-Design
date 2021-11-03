@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import farmeFirst from "../../../images/farme-1.png";
 import farmeSec from "../../../images/frame-2.png";
 import farmeTh from "../../../images/frame-3.png";
+import emailImg from "../../../images/email.png";
 import { createChart } from "lightweight-charts";
 var chart = null;
 class Index extends Component {
@@ -31,7 +32,7 @@ class Index extends Component {
                 },
                 tablet: {
                     breakpoint: { max: 1480, min: 464 },
-                    items: 2,
+                    items: 1,
                 },
                 mobile: {
                     breakpoint: { max: 464, min: 0 },
@@ -41,13 +42,13 @@ class Index extends Component {
             chartWidth:
                 document.getElementById("chart") != undefined
                     ? document.getElementById("chart").clientWidth
-                    : 500,
+                    : 600,
             chart: null,
             currentToken: farmeFirst
         };
     }
     updateSize = () => {
-        chart.resize(document.getElementById("chart").clientWidth, 430);
+        chart.resize(document.getElementById("chart").clientWidth, 600);
     };
 
     componentDidMount = () => {
@@ -55,7 +56,7 @@ class Index extends Component {
         AOS.init();
         chart = createChart(document.querySelector("#chart"), {
             width: this.state.chartWidth,
-            height: 430,
+            height: 600,
             layout: {
                 backgroundColor: "transparent",
                 textColor: "rgba(255, 255, 255, 0.8)",
@@ -97,7 +98,11 @@ class Index extends Component {
     };
 
     updateSize = () => {
-        chart.resize(document.getElementById("chart").clientWidth, 438);
+        if (document.getElementById("chart").clientWidth <= 738) {
+            chart.resize(document.getElementById("chart").clientWidth, 400);
+        } else {
+            chart.resize(document.getElementById("chart").clientWidth, 600);
+        }
     };
 
     handleClick = (img) => {
@@ -123,6 +128,26 @@ class Index extends Component {
         }
         return items;
     };
+    faqs = () => {
+        let items = [];
+        for (var i = 1; i <= 10; i++) {
+            items.push(
+                <div class="accordion-item text-white mb-4 mb-md-5" key={i}>
+                    <h2 class="accordion-header head-color" id={`heading-${i}`}>
+                        <button class={`accordion-button ${(i == 1) ? "" : "collapsed"}`} type="button" data-bs-toggle="collapse" data-bs-target={`#collapse-${i}`} aria-expanded="true" aria-controls={`#collapse-${i}`}>
+                            question {i}
+                        </button>
+                    </h2>
+                    <div id={`collapse-${i}`} class={`accordion-collapse collapse ${(i == 1) ? "show" : ""}`} aria-labelledby={`heading-${i}`}>
+                        <div class="accordion-body">
+                            <p className="pt-2 pb-4"> What is Lorem Ipsum?</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        return items;
+    };
 
     render() {
         return (
@@ -130,19 +155,20 @@ class Index extends Component {
                 <Header />
                 <div className="container-fluid">
                     <div
-                        className="pb-md-5 pb-2"
+                        className="pb-md-1 pb-2"
                         id="chart"
-                        style={{ width: "100%" }}
+                        style={{ width: "100%"}}
                     ></div>
+                    
                 </div>
                 <div
-                    className="container-fluid px-2 px-md-5 py-md-5 py-2"
+                    className="container-fluid px-md-5 py-md-5 py-3"
                     id="section-analytics"
                 >
                     <div
                         className="row"
                         data-aos="fade-up"
-                        data-aos-duration="1000"
+                       
                         data-aos-easing="linear"
                     >
                         <div className="col-lg-12">
@@ -192,7 +218,7 @@ class Index extends Component {
                 </div>
 
                 <div
-                    className="container-fluid px-2 px-md-5 py-md-5 py-2"
+                    className="container-fluid px-md-5 py-md-5 py-3"
                     id="about-section-1"
                 >
                     <div
@@ -217,7 +243,7 @@ class Index extends Component {
                     </div>
                 </div>
                 <div
-                    className="container-fluid px-2 px-md-5 py-md-5 py-2"
+                    className="container-fluid px-md-5 py-md-5 py-3"
                     id="about-section-2"
                 >
                     <div
@@ -262,7 +288,7 @@ class Index extends Component {
                     </div>
                 </div>
                 <div
-                    className="container-fluid px-2 px-md-5 py-md-5 py-2"
+                    className="container-fluid  px-md-5 py-md-5 py-3"
                     id="about-section-3"
                 >
                     <div className="col-lg-12 mb-2 mb-md-5 text-center text-md-start">
@@ -302,7 +328,7 @@ class Index extends Component {
                     </div>
                 </div>
                 <div
-                    className="container-fluid px-2 px-md-5 py-md-5 py-2"
+                    className="container-fluid px-md-5 py-md-5 py-5"
                     id="about-section-4"
                 >
                     <div className="col-lg-12 mb-2 mb-md-5 text-center text-md-start">
@@ -311,24 +337,42 @@ class Index extends Component {
                 </div>
 
                 <div
-                    className="container-fluid px-2 px-md-5 py-md-5 py-2 text-center"
+                    className="container-fluid px-md-5 py-md-5 py-4 text-center"
                     id="about-section-5"
                 >
                     <div className="space-100"></div>
                     <h3 className="">
                         GET THE BIG <br />
                         <span>PICTURE</span>
-                       
+
                     </h3>
                     <button className="btn mt-4">Read Whitepaper</button>
                     <div className="space-100"></div>
                 </div>
                 <div
-                    className="container-fluid px-2 px-md-5 py-md-5 py-2"
+                    className="container-fluid px-md-5 py-md-5 py-3"
                     id="about-section-6"
                 >
-                    <div className="col-lg-12 mb-2 mb-md-5 text-center text-md-start">
+                    <div className="col-lg-12 mb-4 mb-md-5 text-center text-md-start">
                         <h4>FAQS</h4>
+                    </div>
+
+
+                    <div class="accordion" id="accordionFaq">
+                        {this.faqs()}
+                    </div>
+
+                </div>
+
+                <div
+                    className="container-fluid px-md-5 py-md-5 py-3"
+                    id="about-section-7"
+                >
+                    <div className="space-100"></div>
+                    <div className="col-lg-12 mb-2 mb-md-5 text-center text-md-start">
+                        <h4 className="mb-4">Have More Questions?</h4>
+                        <p className="mb-4 p-1">Send us a mail.</p>
+                        <p className="p-2"><img src={emailImg} className="me-2" width="22px" /> admin@betswamp.com</p>
                     </div>
                 </div>
                 <Footer />

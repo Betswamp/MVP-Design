@@ -44,11 +44,11 @@ class Index extends Component {
                 },
                 tablet: {
                     breakpoint: { max: 1024, min: 464 },
-                    items: 3,
+                    items: 2,
                 },
                 mobile: {
                     breakpoint: { max: 464, min: 0 },
-                    items: 1,
+                    items: 2,
                 },
             },
             responsive_center: {
@@ -63,11 +63,11 @@ class Index extends Component {
                 },
                 tablet: {
                     breakpoint: { max: 1024, min: 464 },
-                    items: 3,
+                    items: 2,
                 },
                 mobile: {
                     breakpoint: { max: 464, min: 0 },
-                    items: 1,
+                    items: 2,
                 },
             },
             responsive_game_card: {
@@ -82,7 +82,7 @@ class Index extends Component {
                 },
                 tablet: {
                     breakpoint: { max: 1024, min: 464 },
-                    items: 2,
+                    items: 1,
                 },
                 mobile: {
                     breakpoint: { max: 464, min: 0 },
@@ -123,15 +123,15 @@ class Index extends Component {
                     <div className="row">
                         <div
                             className="col-lg-8 col-md-7 col-sm-12"
-                            data-aos="fade-right"
-                            data-aos-duration="1500"
+                            data-aos="zoom-in-up"
+
                             data-aos-easing="linear"
                         >
-                            <h2>
+                            <h2 className="text-white text-center">
                                 Decentralized <br />
                                 <span>Peer-to-Peer Betting</span>
                             </h2>
-                            <p className="mt-5 mt-md-4 text-white">
+                            <p className="mt-5 mt-md-4 text-white text-center text-md-start">
                                 Create events on litrally anything verifiable and place
                                 unlimited bets.{" "}
                             </p>
@@ -144,15 +144,15 @@ class Index extends Component {
                         </div>
                         <div
                             className="col-lg-4 col-md-5 col-sm-12 text-center"
-                            data-aos="fade-left"
-                            data-aos-duration="1500"
+                            data-aos="zoom-in-up"
+
                             data-aos-easing="linear"
                         >
                             <img src={TopImage} className="img-fluid" />
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid px-2 px-md-5" id="section-analytics">
+                <div className="container-fluid px-md-5" id="section-analytics">
                     <p className="mt-2 mt-md-4 text-white">
                         Market Analytics{" "}
                         <img src={arrowRight} className="ms-3" width="20" />
@@ -178,42 +178,37 @@ class Index extends Component {
                                 containerClass="carousel-container"
                                 removeArrowOnDeviceType={["tablet", "mobile"]}
                                 deviceType={this.props.deviceType}
-                                itemClass="carousel-item-padding-40-px px-3"
+                                itemClass="px-2"
                             >
-                                <div>
-                                    <div className="card chart-card py-4 px-2  overflow-hidden">
-                                        <img src={chartImage} className="mt-3" />
-                                    </div>
+                                <div className="card chart-card py-4 px-2  overflow-hidden align-items-stretch col-12">
+                                    <img src={chartImage} className="mt-3" />
                                 </div>
-                                <div>
-                                    <div className="card chart-card  overflow-hidden text-center py-3">
-                                        <h5 className="theam-text-color m-0">Price</h5>
-                                        <h4 className="text-white mt-3">$ 0.8</h4>
-                                    </div>
+
+                                <div className="card chart-card  overflow-hidden text-center py-3  align-items-stretch col-12">
+                                    <h5 className="theam-text-color m-0">Price</h5>
+                                    <h4 className="text-white mt-3">$ 0.8</h4>
                                 </div>
-                                <div>
-                                    <div className="card chart-card  overflow-hidden text-center py-3">
-                                        <h5 className="theam-text-color m-0">24 Hr change</h5>
-                                        <h4 className="theam-text-green mt-3">5.89 %</h4>
-                                    </div>
+
+                                <div className="card chart-card  overflow-hidden text-center py-3 align-items-stretch col-12">
+                                    <h5 className="theam-text-color m-0">24 Hr change</h5>
+                                    <h4 className="theam-text-green mt-3">5.89 %</h4>
                                 </div>
-                                <div>
-                                    <div className="card chart-card  overflow-hidden text-center py-3">
-                                        <h5 className="theam-text-color m-0">Market cap</h5>
-                                        <h4 className="text-white mt-3">$10m</h4>
-                                    </div>
+
+                                <div className="card chart-card  overflow-hidden text-center py-3 align-items-stretch col-12">
+                                    <h5 className="theam-text-color m-0">Market cap</h5>
+                                    <h4 className="text-white mt-3">$10m</h4>
                                 </div>
-                                <div>
-                                    <div className="card chart-card  overflow-hidden text-center py-3">
-                                        <h5 className="theam-text-color m-0">Total Supply</h5>
-                                        <h4 className="text-white mt-3">250,000,000</h4>
-                                    </div>
+
+                                <div className="card chart-card  overflow-hidden text-center py-3 align-items-stretch col-12">
+                                    <h5 className="theam-text-color m-0">Total Supply</h5>
+                                    <h4 className="text-white mt-3">250,000,000</h4>
                                 </div>
+
                             </Carousel>
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid px-2 px-md-5" id="section-analytics">
+                <div className="container-fluid px-md-5" id="section-analytics">
                     <div className="row py-5">
                         <div className="col-lg-12 position-relative" id="video-frame">
                             <video poster="placeholder.png" controls={false}>
@@ -226,7 +221,7 @@ class Index extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid px-2 px-md-5" id="section-statistics">
+                <div className="container-fluid px-md-5" id="section-statistics">
                     <p className="mt-2 mt-md-4 text-white">
                         <img src={statiImage} className="me-2" width="15" /> Platform
                         Statistics
@@ -252,41 +247,35 @@ class Index extends Component {
                                 containerClass="carousel-container"
                                 removeArrowOnDeviceType={["tablet", "mobile"]}
                                 deviceType={this.props.deviceType}
-                                itemClass="carousel-item-padding-40-px px-4"
+                                itemClass="px-2"
                             >
-                                <div>
-                                    <div className="card chart-card  overflow-hidden text-center py-3">
-                                        <h5 className="theam-text-color m-0">Total Payout</h5>
-                                        <h4 className="text-white mt-4">$100,000,00</h4>
-                                    </div>
+
+                                <div className="card chart-card  overflow-hidden text-center py-3 align-items-stretch col-12">
+                                    <h5 className="theam-text-color m-0">Total Payout</h5>
+                                    <h4 className="text-white mt-4">$100,000,00</h4>
                                 </div>
-                                <div>
-                                    <div className="card chart-card overflow-hidden text-center py-3">
-                                        <h5 className="theam-text-color m-0">Total 24hr Payout</h5>
-                                        <h4 className="text-white mt-4">$25,000,00</h4>
-                                    </div>
+
+                                <div className="card chart-card overflow-hidden text-center py-3 align-items-stretch col-12">
+                                    <h5 className="theam-text-color m-0">Total 24hr Payout</h5>
+                                    <h4 className="text-white mt-4">$25,000,00</h4>
                                 </div>
-                                <div>
-                                    <div className="card chart-card  overflow-hidden text-center py-3">
-                                        <h5 className="theam-text-color m-0">Active users</h5>
-                                        <h4 className="text-white mt-4">4,000,00</h4>
-                                    </div>
+
+                                <div className="card chart-card  overflow-hidden text-center py-3 align-items-stretch col-12">
+                                    <h5 className="theam-text-color m-0">Active users</h5>
+                                    <h4 className="text-white mt-4">4,000,00</h4>
                                 </div>
-                                <div>
-                                    <div className="card chart-card  overflow-hidden text-center py-3">
-                                        <h5 className="theam-text-color m-0">Total bet Created</h5>
-                                        <h4 className="text-white mt-4">250,00</h4>
-                                    </div>
+
+                                <div className="card chart-card  overflow-hidden text-center py-3 align-items-stretch col-12">
+                                    <h5 className="theam-text-color m-0">Total bet Created</h5>
+                                    <h4 className="text-white mt-4">250,00</h4>
                                 </div>
+
                             </Carousel>
                         </div>
                     </div>
                 </div>
                 <div className="space-100"></div>
-                <div
-                    className="container-fluid px-2 px-md-5 my-5"
-                    id="section-bet-cards"
-                >
+                <div className="container-fluid px-md-5 my-5" id="section-bet-cards">
                     <Carousel
                         swipeable={true}
                         draggable={true}
@@ -312,17 +301,14 @@ class Index extends Component {
                         </p>
                     </div>
                 </div>
-                <div
-                    className="container-fluid px-2 px-md-5 mt-5"
-                    id="section-validate"
-                >
+                <div className="container-fluid px-md-5 mt-5" id="section-validate">
                     <div className="space-100"></div>
                     <div className="space-100"></div>
                     <div className="row">
                         <div
                             className="col-lg-7 mt-5"
-                            data-aos="fade-right"
-                            data-aos-duration="1200"
+                            data-aos="zoom-in-down"
+
                             data-aos-easing="linear"
                         >
                             <h1 className="font-raleway">
@@ -340,8 +326,7 @@ class Index extends Component {
                         </div>
                         <div
                             className="col-lg-4 text-center"
-                            data-aos="fade-left"
-                            data-aos-duration="1300"
+                            data-aos="zoom-in-down"
                             data-aos-easing="linear"
                         >
                             <img src={validateImage} className="img-fluid" />
@@ -374,8 +359,7 @@ class Index extends Component {
                         </div>
                     </div>
                 </div>
-
-                <div className="container-fluid px-2 px-md-5 my-5" id="section-news">
+                <div className="container-fluid px-md-5 my-5" id="section-news">
                     <div className="space-100"></div>
                     <p className="mt-2 mt-md-4 text-white">
                         NEWS <img src={lineImage} className="ms-3" />
@@ -403,7 +387,7 @@ class Index extends Component {
                 </div>
 
                 <div
-                    className="container-fluid px-2 px-md-5 my-5"
+                    className="container-fluid px-md-5 my-5"
                     id="section-partners"
                 >
                     <div className="space-100"></div>

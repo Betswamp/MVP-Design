@@ -41,7 +41,7 @@ class Index extends Component {
     return (
       <Fragment>
           <AppHeader />
-        <div className="container-fluid px-md-5 px-2 mt-2">
+        <div className="container-fluid px-md-5 mt-2">
           <div className="space-100"></div>
           <div className="d-flex flex-wrap">
             <div className="me-md-4 me-2">
