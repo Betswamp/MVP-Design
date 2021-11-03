@@ -14,6 +14,7 @@ import farmeFirst from "../../../images/farme-1.png";
 import farmeSec from "../../../images/frame-2.png";
 import farmeTh from "../../../images/frame-3.png";
 import emailImg from "../../../images/email.png";
+import loading from "../../../images/loading.png";
 import { createChart } from "lightweight-charts";
 var chart = null;
 class Index extends Component {
@@ -44,7 +45,8 @@ class Index extends Component {
                     ? document.getElementById("chart").clientWidth
                     : 600,
             chart: null,
-            currentToken: farmeFirst
+            currentToken: farmeFirst,
+            loader: true,
         };
     }
     updateSize = () => {
@@ -92,9 +94,15 @@ class Index extends Component {
         setTimeout(async () => {
             this.setState({
                 chartWidth: document.getElementById("chart").clientWidth,
+                loader: false
             });
             await this.updateSize();
         }, 500);
+        setTimeout(async () => {
+            this.setState({
+                loader: false
+            });
+        }, 2000);
     };
 
     updateSize = () => {
@@ -107,10 +115,9 @@ class Index extends Component {
 
     handleClick = (img) => {
         this.setState({
-            currentToken: img
-        })
-    }
-
+            currentToken: img,
+        });
+    };
 
     //GameCard
     getGameCard = () => {
@@ -132,14 +139,25 @@ class Index extends Component {
         let items = [];
         for (var i = 1; i <= 10; i++) {
             items.push(
-                <div class="accordion-item text-white mb-4 mb-md-5" key={i}>
-                    <h2 class="accordion-header head-color" id={`heading-${i}`}>
-                        <button class={`accordion-button ${(i == 1) ? "" : "collapsed"}`} type="button" data-bs-toggle="collapse" data-bs-target={`#collapse-${i}`} aria-expanded="true" aria-controls={`#collapse-${i}`}>
+                <div classname="accordion-item text-white mb-4 mb-md-5" key={i}>
+                    <h2 classname="accordion-header head-color" id={`heading-${i}`}>
+                        <button
+                            class={`accordion-button ${i == 1 ? "" : "collapsed"}`}
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target={`#collapse-${i}`}
+                            aria-expanded="true"
+                            aria-controls={`#collapse-${i}`}
+                        >
                             question {i}
                         </button>
                     </h2>
-                    <div id={`collapse-${i}`} class={`accordion-collapse collapse ${(i == 1) ? "show" : ""}`} aria-labelledby={`heading-${i}`}>
-                        <div class="accordion-body">
+                    <div
+                        id={`collapse-${i}`}
+                        class={`accordion-collapse collapse ${i == 1 ? "show" : ""}`}
+                        aria-labelledby={`heading-${i}`}
+                    >
+                        <div classname="accordion-body">
                             <p className="pt-2 pb-4"> What is Lorem Ipsum?</p>
                         </div>
                     </div>
@@ -152,25 +170,25 @@ class Index extends Component {
     render() {
         return (
             <Fragment>
+                {this.state.loader ?
+                    <div className="loading">
+                        <img src={loading} width="250" />
+                    </div>
+                    : ""}
+
                 <Header />
                 <div className="container-fluid">
                     <div
                         className="pb-md-1 pb-2"
                         id="chart"
-                        style={{ width: "100%"}}
+                        style={{ width: "100%" }}
                     ></div>
-                    
                 </div>
                 <div
                     className="container-fluid px-md-5 py-md-5 py-3"
                     id="section-analytics"
                 >
-                    <div
-                        className="row"
-                        data-aos="fade-up"
-                       
-                        data-aos-easing="linear"
-                    >
+                    <div className="row" data-aos="fade-up" data-aos-easing="linear">
                         <div className="col-lg-12">
                             <Carousel
                                 swipeable={true}
@@ -216,7 +234,6 @@ class Index extends Component {
                         </div>
                     </div>
                 </div>
-
                 <div
                     className="container-fluid px-md-5 py-md-5 py-3"
                     id="about-section-1"
@@ -270,19 +287,50 @@ class Index extends Component {
                         >
                             <div className="card about-card  overflow-hidden p-2 p-md-4 align-items-stretch ">
                                 <h4 className="theam-text-color mb-3">Anonymous</h4>
-                                <p>Betswamp does not collect any form of data from users neither is registration required to use the platform. gaming on Betswamp has been designed with flexibility and security in mind, gamers can get started just as easily as connecting their wallets to the platform and get instant access to a global decentralized peer-to-peer network of iGaming.</p>
+                                <p>
+                                    Betswamp does not collect any form of data from users neither
+                                    is registration required to use the platform. gaming on
+                                    Betswamp has been designed with flexibility and security in
+                                    mind, gamers can get started just as easily as connecting
+                                    their wallets to the platform and get instant access to a
+                                    global decentralized peer-to-peer network of iGaming.
+                                </p>
                             </div>
                             <div className="card about-card  overflow-hidden p-2 p-md-4 align-items-stretch ">
                                 <h4 className="theam-text-color mb-3">Decentralized</h4>
-                                <p>Betswamp is 100% decentralized with no central authority or influence on events, all events are user-created, and outcomes are also validated by users using a unique verification algorithm based on the "wisdom of crowds" concept this concept builds upon the idea that that large groups of people are collectively smarter than individual experts when it comes to problem-solving, decisionmaking, innovating, and predicting.</p>
+                                <p>
+                                    Betswamp is 100% decentralized with no central authority or
+                                    influence on events, all events are user-created, and outcomes
+                                    are also validated by users using a unique verification
+                                    algorithm based on the "wisdom of crowds" concept this concept
+                                    builds upon the idea that that large groups of people are
+                                    collectively smarter than individual experts when it comes to
+                                    problem-solving, decisionmaking, innovating, and predicting.
+                                </p>
                             </div>
                             <div className="card about-card  overflow-hidden p-2 p-md-4 align-items-stretch">
                                 <h4 className="theam-text-color mb-3">Fair</h4>
-                                <p>On Betswamp, Players earn their exact winnings based upon their stake percentage on the event pool after validation. Unlike other platforms, Betswamp offers Participants on an event bonus from a portion of the pool regardless of the outcome chosen on that event. Betswamp smart contract utilizes a unique distribution algorithm that ensures Players do not only get guaranteed payouts on events won but also earn regardless of the outcome on each event participated.</p>
+                                <p>
+                                    On Betswamp, Players earn their exact winnings based upon
+                                    their stake percentage on the event pool after validation.
+                                    Unlike other platforms, Betswamp offers Participants on an
+                                    event bonus from a portion of the pool regardless of the
+                                    outcome chosen on that event. Betswamp smart contract utilizes
+                                    a unique distribution algorithm that ensures Players do not
+                                    only get guaranteed payouts on events won but also earn
+                                    regardless of the outcome on each event participated.
+                                </p>
                             </div>
                             <div className="card about-card  overflow-hidden p-2 p-md-4 align-items-stretch">
                                 <h4 className="theam-text-color mb-3">Peer-To-Peer</h4>
-                                <p>on Betswamp, users wager on events created by other users on the platform, unlike conventional iGaming platforms where Players wager on events provided by bookies. No event is created or controlled by the system. Events on Betswamp are validated by validators within the platform with no central control or influence from any external or internal party.</p>
+                                <p>
+                                    on Betswamp, users wager on events created by other users on
+                                    the platform, unlike conventional iGaming platforms where
+                                    Players wager on events provided by bookies. No event is
+                                    created or controlled by the system. Events on Betswamp are
+                                    validated by validators within the platform with no central
+                                    control or influence from any external or internal party.
+                                </p>
                             </div>
                         </Carousel>
                     </div>
@@ -302,20 +350,43 @@ class Index extends Component {
                     >
                         <div className="col-lg-6 align-items-stretch mb-4">
                             <div className="d-flex align-items-center justify-content-center flex-column">
-                                <div class="form-check my-2 my-md-5">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={(this.state.currentToken == farmeFirst) ? true : false} onChange={() => this.handleClick(farmeFirst)} />
+                                <div classname="form-check my-2 my-md-5">
+                                    <input
+                                        className="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault1"
+                                        checked={
+                                            this.state.currentToken == farmeFirst ? true : false
+                                        }
+                                        onChange={() => this.handleClick(farmeFirst)}
+                                    />
                                     <label className="form-check-label" for="flexRadioDefault1">
                                         8% Sell Tax
                                     </label>
                                 </div>
-                                <div class="form-check my-2 my-md-5">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked={(this.state.currentToken == farmeSec) ? true : false} onChange={() => this.handleClick(farmeSec)} />
+                                <div classname="form-check my-2 my-md-5">
+                                    <input
+                                        className="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault2"
+                                        checked={this.state.currentToken == farmeSec ? true : false}
+                                        onChange={() => this.handleClick(farmeSec)}
+                                    />
                                     <label className="form-check-label" for="flexRadioDefault2">
-                                        4%  Buy Tax
+                                        4% Buy Tax
                                     </label>
                                 </div>
-                                <div class="form-check my-2 my-md-5">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked={(this.state.currentToken == farmeTh) ? true : false} onChange={() => this.handleClick(farmeTh)} />
+                                <div classname="form-check my-2 my-md-5">
+                                    <input
+                                        className="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault3"
+                                        checked={this.state.currentToken == farmeTh ? true : false}
+                                        onChange={() => this.handleClick(farmeTh)}
+                                    />
                                     <label className="form-check-label" for="flexRadioDefault3">
                                         Distribution
                                     </label>
@@ -344,7 +415,6 @@ class Index extends Component {
                     <h3 className="">
                         GET THE BIG <br />
                         <span>PICTURE</span>
-
                     </h3>
                     <button className="btn mt-4">Read Whitepaper</button>
                     <div className="space-100"></div>
@@ -357,11 +427,9 @@ class Index extends Component {
                         <h4>FAQS</h4>
                     </div>
 
-
-                    <div class="accordion" id="accordionFaq">
+                    <div classname="accordion" id="accordionFaq">
                         {this.faqs()}
                     </div>
-
                 </div>
 
                 <div
@@ -372,7 +440,10 @@ class Index extends Component {
                     <div className="col-lg-12 mb-2 mb-md-5 text-center text-md-start">
                         <h4 className="mb-4">Have More Questions?</h4>
                         <p className="mb-4 p-1">Send us a mail.</p>
-                        <p className="p-2"><img src={emailImg} className="me-2" width="22px" /> admin@betswamp.com</p>
+                        <p className="p-2">
+                            <img src={emailImg} className="me-2" width="22px" />{" "}
+                            admin@betswamp.com
+                        </p>
                     </div>
                 </div>
                 <Footer />
