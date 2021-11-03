@@ -1146,15 +1146,14 @@ footer {
 }
 #accordionFaq .accordion-button:not(.collapsed) {
   background: #0f0f0f;
-  color: unset;
+ 
 }
 #accordionFaq .accordion-item:first-of-type .accordion-button {
   border: none;
 }
 #accordionFaq .accordion-button:focus {
   z-index: 3;
-  border-color: transparent;
-  outline: 0;
+
   box-shadow: none;
 }
 #accordionFaq .accordion-body {
@@ -1165,7 +1164,7 @@ footer {
 #accordionFaq .accordion-collapse {
   background: #0f0f0f;
 }
-#accordionFaq .accordion-body {
+#accordionFaq .accordion-body p{
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -1194,7 +1193,6 @@ footer {
   color: #ffffff;
 }
 
-/* Absolute Center Spinner */
 .loading {
   position: absolute;
   position: absolute;

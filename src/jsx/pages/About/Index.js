@@ -40,8 +40,7 @@ class Index extends Component {
                     items: 1,
                 },
             },
-            chartWidth:
-                document.getElementById("chart") != undefined
+            chartWidth: document.getElementById("chart") != null
                     ? document.getElementById("chart").clientWidth
                     : 600,
             chart: null,
@@ -97,7 +96,7 @@ class Index extends Component {
                 loader: false
             });
             await this.updateSize();
-        }, 500);
+        }, 1500);
         setTimeout(async () => {
             this.setState({
                 loader: false
@@ -139,8 +138,8 @@ class Index extends Component {
         let items = [];
         for (var i = 1; i <= 10; i++) {
             items.push(
-                <div classname="accordion-item text-white mb-4 mb-md-5" key={i}>
-                    <h2 classname="accordion-header head-color" id={`heading-${i}`}>
+                <div className="accordion-item text-white mb-4 mb-md-5" key={i}>
+                    <h2 className="accordion-header head-color" id={`heading-${i}`}>
                         <button
                             class={`accordion-button ${i == 1 ? "" : "collapsed"}`}
                             type="button"
@@ -157,7 +156,7 @@ class Index extends Component {
                         class={`accordion-collapse collapse ${i == 1 ? "show" : ""}`}
                         aria-labelledby={`heading-${i}`}
                     >
-                        <div classname="accordion-body">
+                        <div className="accordion-body">
                             <p className="pt-2 pb-4"> What is Lorem Ipsum?</p>
                         </div>
                     </div>
@@ -350,7 +349,7 @@ class Index extends Component {
                     >
                         <div className="col-lg-6 align-items-stretch mb-4">
                             <div className="d-flex align-items-center justify-content-center flex-column">
-                                <div classname="form-check my-2 my-md-5">
+                                <div className="form-check my-2 my-md-5">
                                     <input
                                         className="form-check-input"
                                         type="radio"
@@ -365,7 +364,7 @@ class Index extends Component {
                                         8% Sell Tax
                                     </label>
                                 </div>
-                                <div classname="form-check my-2 my-md-5">
+                                <div className="form-check my-2 my-md-5">
                                     <input
                                         className="form-check-input"
                                         type="radio"
@@ -378,7 +377,7 @@ class Index extends Component {
                                         4% Buy Tax
                                     </label>
                                 </div>
-                                <div classname="form-check my-2 my-md-5">
+                                <div className="form-check my-2 my-md-5">
                                     <input
                                         className="form-check-input"
                                         type="radio"
@@ -426,8 +425,7 @@ class Index extends Component {
                     <div className="col-lg-12 mb-4 mb-md-5 text-center text-md-start">
                         <h4>FAQS</h4>
                     </div>
-
-                    <div classname="accordion" id="accordionFaq">
+                    <div className="accordion" id="accordionFaq">
                         {this.faqs()}
                     </div>
                 </div>
