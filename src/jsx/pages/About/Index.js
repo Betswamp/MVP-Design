@@ -14,7 +14,10 @@ import farmeFirst from "../../../images/farme-1.png";
 import farmeSec from "../../../images/frame-2.png";
 import farmeTh from "../../../images/frame-3.png";
 import emailImg from "../../../images/email.png";
+import whiteDot from "../../../images/white-dot.png";
 import loading from "../../../images/loading.png";
+import navIcon from "../../../images/nav.png";
+import greyDot from "../../../images/dot-grey.png";
 import { createChart } from "lightweight-charts";
 var chart = null;
 class Index extends Component {
@@ -40,12 +43,45 @@ class Index extends Component {
                     items: 1,
                 },
             },
+            roadMapSlide: {
+                superLargeDesktop: {
+                    // the naming can be any, depends on you.
+                    breakpoint: { max: 4000, min: 1480 },
+                    items: 1,
+                },
+                desktop: {
+                    breakpoint: { max: 3000, min: 1024 },
+                    items: 1,
+                },
+                tablet: {
+                    breakpoint: { max: 1480, min: 464 },
+                    items: 1,
+                },
+                mobile: {
+                    breakpoint: { max: 464, min: 0 },
+                    items: 1,
+                },
+            },
             chartWidth: document.getElementById("chart") != null
-                    ? document.getElementById("chart").clientWidth
-                    : 600,
+                ? document.getElementById("chart").clientWidth
+                : 600,
             chart: null,
             currentToken: farmeFirst,
             loader: true,
+            roadMap: {
+                0: {
+                    title: 'Phase 1',
+                    is_active: true,
+                },
+                1: {
+                    title: 'Phase 2',
+                    is_active: false,
+                },
+                2: {
+                    title: 'Phase 3',
+                    is_active: false,
+                },
+            }
         };
     }
     updateSize = () => {
@@ -165,6 +201,21 @@ class Index extends Component {
         }
         return items;
     };
+
+    doSpeicalThing = (e) => {
+        let roadMap = this.state.roadMap
+      
+        if (e == 0) {
+            roadMap[0].is_active = true
+            roadMap[1].is_active = false
+            roadMap[2].is_active = false
+        } else {
+            roadMap[e].is_active = true
+        }
+        this.setState({
+            roadMap: roadMap
+        })
+    }
 
     render() {
         return (
@@ -403,6 +454,53 @@ class Index extends Component {
                 >
                     <div className="col-lg-12 mb-2 mb-md-5 text-center text-md-start">
                         <h4>Road Map</h4>
+                    </div>
+
+                    <div className="col-lg-12">
+                        <Carousel
+                            swipeable={true}
+                            draggable={true}
+                            arrows={false}
+                            showDots={false}
+                            responsive={this.state.roadMapSlide}
+                            ssr={true} // means to render carousel on server-side.
+                            infinite={false}
+                            keyBoardControl={true}
+                            customTransition="all .5"
+                            transitionDuration={500}
+                            containerClass="carousel-container"
+                            removeArrowOnDeviceType={["tablet", "mobile"]}
+                            deviceType={this.props.deviceType}
+
+                            //centerMode={true}
+                            itemClass="row"
+                            afterChange={(previousSlide, { currentSlide, onMove }) => {
+                                this.doSpeicalThing(currentSlide);
+                            }}
+                        >
+
+                            {Object.entries(this.state.roadMap).map(([k, v]) => (
+                                <div className="col-12">
+                                    <div className={`roadMapNav mb-4 pb-0 mb-md-5 pb-md-5 ${(v.is_active) ? '' : 'active'}`}>
+                                        <p className={(v.is_active) ? '' : 'mt-3'}>
+                                            <img src={(v.is_active) ? navIcon : greyDot} width={(v.is_active) ? '64' : '40'} />
+                                            <hr style={{ marginTop: (v.is_active) ? '' : '8px' }} />
+                                        </p>
+                                    </div>
+                                    <div className="roadMapTitle mb-4 px-2">
+                                        <p>{v.title}</p>
+                                    </div>
+                                    <div className={`px-3`}>
+                                        <div className={`roadMapCard ${(v.is_active) ? 'active' : ''}`}>
+                                            <p>
+                                                <img src={whiteDot} className="me-4" />
+                                                {v.title}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </Carousel>
                     </div>
                 </div>
 
