@@ -127,7 +127,7 @@ class Index extends Component {
 
                             data-aos-easing="linear"
                         >
-                            <h2 className="text-white text-center">
+                            <h2 className="text-white text-center text-md-start">
                                 Decentralized <br />
                                 <span>Peer-to-Peer Betting</span>
                             </h2>
@@ -138,24 +138,23 @@ class Index extends Component {
                             <div className="text-center text-md-start my-4 my-md-0">
                                 <NavLink
                                     to="/app"
-                                    className="btn btn-md theam-bg-red mt-2 mt-md-5"
+                                    className="btn btn-md theam-bg-red mt-2 mt-md-5 homeTopBtn"
                                 >Launch app</NavLink>
                             </div>
                         </div>
                         <div
-                            className="col-lg-4 col-md-5 col-sm-12 text-center"
+                            className="col-lg-4 col-md-5 col-sm-12 text-center homeTopImage"
                             data-aos="zoom-in-up"
-
                             data-aos-easing="linear"
                         >
-                            <img src={TopImage} className="img-fluid" />
+                            <img src={TopImage} className="img-fluid my-5 my-md-0" />
                         </div>
                     </div>
                 </div>
                 <div className="container-fluid px-md-5" id="section-analytics">
-                    <p className="mt-2 mt-md-4 text-white">
+                    <p className="mt-2 mt-md-4 text-white px-2 px-md-4 pb-4 div-p">
                         Market Analytics{" "}
-                        <img src={arrowRight} className="ms-3" width="20" />
+                        <img src={arrowRight} className="ms-3" width="21px" />
                     </p>
                     <div
                         className="row"
@@ -222,8 +221,8 @@ class Index extends Component {
                     </div>
                 </div>
                 <div className="container-fluid px-md-5" id="section-statistics">
-                    <p className="mt-2 mt-md-4 text-white">
-                        <img src={statiImage} className="me-2" width="15" /> Platform
+                    <p className="mt-2 mt-md-4 text-white px-2 px-md-4 pb-4 div-p">
+                        <img src={statiImage} className="me-2" width="20.02" /> Platform
                         Statistics
                     </p>
                     <div
@@ -361,7 +360,7 @@ class Index extends Component {
                 </div>
                 <div className="container-fluid px-md-5 my-5" id="section-news">
                     <div className="space-100"></div>
-                    <p className="mt-2 mt-md-4 text-white">
+                    <p className="mt-2 mt-md-4 text-white px-2 px-md-3 pb-4 div-p-1">
                         NEWS <img src={lineImage} className="ms-3" />
                     </p>
                     <div className="space-50"></div>
@@ -391,7 +390,7 @@ class Index extends Component {
                     id="section-partners"
                 >
                     <div className="space-100"></div>
-                    <p className="mt-2 mt-md-4 text-white text-uppercase">
+                    <p className="mt-2 mt-md-4 text-white px-2 px-md-3 pb-4 div-p-1 text-uppercase">
                         partners <img src={lineImage} className="ms-3" />
                     </p>
                     <div className="space-50"></div>

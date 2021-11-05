@@ -10,6 +10,22 @@ import bi_medium from '../../../images/bi_medium.png';
 import icons_github from '../../../images/akar-icons_github-fill.png';
 import cib_telegram from '../../../images/cib_telegram-plane.png';
 class Footer extends Component {
+
+    socialIcons = () => {
+        return (
+            <div className="d-flex justify-content-center justify-content-sm-end my-3 flex-wrap social-icons">
+                <img src={facebook} className="mx-2" />
+                <img src={icons_twitter} className="mx-2" />
+                <img src={icons_instagram} className="mx-2" />
+                <img src={icons_discord} className="mx-2" />
+                <img src={bi_medium} className="mx-2" />
+                <img src={icons_github} className="mx-2" />
+                <img src={cib_telegram} className="mx-2" />
+            </div>
+        )
+    }
+
+
     render() {
         return (
             <Fragment>
@@ -17,35 +33,32 @@ class Footer extends Component {
                     <div className="space-100"></div>
 
                     <div className="row">
-                        <div className="col-md-5 text-center text-md-start mb-5 mb-md-0">
-                            <img src={logo} width="150" />
+                        <div className="col-md-4 text-center text-md-start mb-5 mb-md-0">
+                            <img src={logo} width="146" />
+                        </div>
+                        <div className="col-md-12 d-block d-md-none mb-4 mb-md-0">
+                            {this.socialIcons()}
                         </div>
                         <div className="col-md-2 text-center text-md-start">
                             <p className="theam-text-color mb-4">INFO</p>
-                            <ul className="list-unstyled text-small">
+                            <ul className="list-unstyled text-small footerList">
                                 <li><a className="text-white" href="#">About</a></li>
                                 <li><a className="text-white" href="#">News</a></li>
                             </ul>
                         </div>
                         <div className="col-md-3 text-center text-md-start">
                             <p className="theam-text-color mb-2 mb-md-4">CONTACT</p>
-                            <p className="text-white"><img src={emailImg} width="18" /> admin@betswamp.com</p>
+                            <p className="text-white text-email mb-0"><img src={emailImg} width="22" /> admin@betswamp.com</p>
                         </div>
-                        <div className="col-md-2 text-center text-md-start">
-                            <button className="btn btn-md theam-bg-red mt-2 mt-md-5">
+                        <div className="col-md-3 text-center text-md-start my-5 my-md-0">
+                            <button className="btn btn-md theam-bg-red">
                                 Launch app
                             </button>
                         </div>
                     </div>
                     <div className="space-100"></div>
-                    <div className="d-flex justify-content-center justify-content-sm-end my-3 flex-wrap social-icons">
-                        <img src={facebook}  className="mx-2" />
-                        <img src={icons_twitter}  className="mx-2" />
-                        <img src={icons_instagram}  className="mx-2" />
-                        <img src={icons_discord}  className="mx-2" />
-                        <img src={bi_medium}  className="mx-2" />
-                        <img src={icons_github}  className="mx-2" />
-                        <img src={cib_telegram}  className="mx-2" />
+                    <div className="d-none d-md-block">
+                        {this.socialIcons()}
                     </div>
                     <div className="media-icons"></div>
                     <div className="row mt-4" id="footer-bottom">

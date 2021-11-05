@@ -18,6 +18,10 @@
   }
   #section-home h2 {
     font-size: 1.5rem;
+    line-height: 30px;
+  }
+  #section-home .homeTopBtn{
+    width: 100%;
   }
   #section-home p {
     font-size: 12px;
@@ -178,6 +182,9 @@
   }
   .chart-card h5 {
     font-size: 0.9rem;
+  }
+  .homeTopImage img{
+    width: 70%;
   }
 }
 @media screen and (max-width: 1200px) {

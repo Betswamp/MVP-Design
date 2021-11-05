@@ -56,27 +56,69 @@ body {
   display: block;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  font-family: "Orbitron", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
-  color: #ffffff;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
 }
 .home-header .btn {
-  font-family: "Orbitron", sans-serif;
+  width: 201px;
+  font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0f0f0f;
+  background: #ff0000;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
+
 #section-home h2 {
   font-style: normal;
   font-weight: 900;
-  font-size: 2.5rem;
-  color: #ffffff;
+  font-size: 48px;
+  line-height: 60px;
 }
 #section-home h2 span {
   color: #ff0000;
+}
+#section-home p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+#section-home .homeTopBtn {
+  background: #ff0000;
+  padding: 12px 10px;
+  width: 300px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #0f0f0f;
+}
+.div-p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.div-p-1 {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 .chart-card {
   margin-bottom: 1.875rem;
@@ -1321,4 +1363,46 @@ footer {
   width: 100%;
   border-radius: 20px;
   padding: 15px;
+}
+footer p.theam-text-color {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ff0000;
+}
+footer p.theam-text-color {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+footer .footerList li a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer .footerList li {
+  padding-bottom: 2rem;
+}
+footer button {
+  background: #ff0000;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 300px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #0f0f0f;
+}
+.text-email {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
 }

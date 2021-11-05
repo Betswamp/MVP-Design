@@ -10,8 +10,8 @@ class Header extends Component {
                     aria-label="Fifth navbar example"
                 >
                     <div className="container-fluid home-header">
-                        <NavLink class="navbar-brand" to="/">
-                            <img src={logo} width="90" className="py-1" />
+                        <NavLink class="navbar-brand px-2 px-md-4" to="/">
+                            <img src={logo} width="95" className="py-1" />
                         </NavLink>
                         <button
                             className="navbar-toggler"
@@ -28,13 +28,13 @@ class Header extends Component {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                             <form>
                                 <ul className="navbar-nav">
-                                    <li className="nav-item px-2">
+                                    <li className="nav-item px-2 px-md-4">
                                         <NavLink className="nav-link text-white mt-1" to="/about">About</NavLink>
                                     </li>
-                                    <li className="nav-item px-2">
+                                    <li className="nav-item px-2 px-md-4">
                                         <NavLink className="nav-link text-white mt-1" to="/#news">News</NavLink>
                                     </li>
-                                    <li className="nav-item px-2">
+                                    <li className="nav-item px-2 px-md-4">
                                         <NavLink className="btn btn-md theam-bg-red mt-1" to="/app">Launch app </NavLink>
                                     </li>
                                 </ul>
