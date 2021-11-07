@@ -21,4 +21,4 @@ Betswamp is a decentralized peer-to-peer iGaming platform built on Binance smart
 - show list of sub-category of a category
 - pause platform (onlyOwner)
 
-Here's a URL to the platform UI to get a clear view of what the platform: https://dreamy-kilby-5b7252.netlify.app/app
+Here's a URL to the platform UI to get a clear view of what the platform looks like: https://dreamy-kilby-5b7252.netlify.app/app
