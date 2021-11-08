@@ -24,7 +24,7 @@ import segaImage from "../../../images/sega.png";
 import xboxImage from "../../../images/xbox.png";
 import psImage from "../../../images/ps.png";
 import chartImage from "../../../images/chart.png";
-
+import SwipeCard from './SwipeCard';
 const SalesChart = loadable(() =>
     pMinDelay(import("../../components/Chart/SalesChart"), 1000)
 );
@@ -117,12 +117,12 @@ class Index extends Component {
         return (
             <Fragment>
                 <Header />
-                <div className="container mb-5 mb-md-0" id="section-home">
+              
+                <div className="container-fluid px-md-5" id="section-home">
                     <div className="space-100"></div>
-                    <div className="space-100"></div>
-                    <div className="row">
+                    <div className="row  mx-md-5  px-md-5">
                         <div
-                            className="col-lg-8 col-md-7 col-sm-12"
+                            className="col-lg-8 col-md-7 col-sm-12 mt-md-5"
                             data-aos="zoom-in-up"
 
                             data-aos-easing="linear"
@@ -131,11 +131,11 @@ class Index extends Component {
                                 Decentralized <br />
                                 <span>Peer-to-Peer Betting</span>
                             </h2>
-                            <p className="mt-5 mt-md-4 text-white text-center text-md-start">
+                            <p className="mt-4 mt-md-5 text-white text-center text-md-start">
                                 Create events on litrally anything verifiable and place
                                 unlimited bets.{" "}
                             </p>
-                            <div className="text-center text-md-start my-4 my-md-0">
+                            <div className="text-center text-md-start my-5 my-md-0">
                                 <NavLink
                                     to="/app"
                                     className="btn btn-md theam-bg-red mt-2 mt-md-5 homeTopBtn"
@@ -143,13 +143,15 @@ class Index extends Component {
                             </div>
                         </div>
                         <div
-                            className="col-lg-4 col-md-5 col-sm-12 text-center homeTopImage"
+                            className="col-lg-4 col-md-5 col-sm-12 text-center homeTopImage position-relative"
                             data-aos="zoom-in-up"
                             data-aos-easing="linear"
                         >
-                            <img src={TopImage} className="img-fluid my-5 my-md-0" />
+                              <SwipeCard />
+                            {/* <img src={TopImage} className="img-fluid my-5 my-md-0" /> */}
                         </div>
                     </div>
+                    <div className="space-100"></div>
                 </div>
                 <div className="container-fluid px-md-5" id="section-analytics">
                     <p className="mt-2 mt-md-4 text-white px-2 px-md-4 pb-4 div-p">
