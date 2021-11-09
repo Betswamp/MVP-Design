@@ -4,45 +4,45 @@ import landing1 from "../../../images/landing-Bets-cards-games-1.png";
 import landing2 from "../../../images/landing-Bets-cards-awards.png";
 import landing3 from "../../../images/landing-Bets-cards-sports.png";
 import landing4 from "../../../images/landing-Bets-cards-EVERY.png";
-import layers from "../../../images/layers.png";
-import { Swiper, SwiperSlide } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+    Autoplay, Pagination, Navigation, EffectCards
+} from 'swiper';
 
+SwiperCore.use([Autoplay, Pagination, Navigation, EffectCards]);
 class SwipeCard extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            directionTinder: "swipeTopRight",
-            directionToggle: "sideSlide",
-            directionStack: "topRight",
-            isOpen: false
-        }
-        this.Tinder = null
     }
     componentDidMount() {
-       
+
     }
 
 
     render() {
+
         return (
             <div>
-                
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                <Swiper effect={'cards'} grabCursor={true} className="swiper mySwiper" autoplay={{
+                    "delay": 2000,
+                    "disableOnInteraction": false
+                }}
+                >
+                    <div className="swiper-wrapper">
+                        <SwiperSlide class="swiper-slide">
                             <img src={landing1} />
-                        </div>
-                        <div class="swiper-slide">
+                        </SwiperSlide>
+                        <SwiperSlide class="swiper-slide">
                             <img src={landing2} />
-                        </div>
-                        <div class="swiper-slide">
+                        </SwiperSlide>
+                        <SwiperSlide class="swiper-slide">
                             <img src={landing3} />
-                        </div>
-                        <div class="swiper-slide">
+                        </SwiperSlide>
+                        <SwiperSlide class="swiper-slide">
                             <img src={landing4} />
-                        </div>
+                        </SwiperSlide>
                     </div>
-                </div>
+                </Swiper>
             </div>
         );
     }

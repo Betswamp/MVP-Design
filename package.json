@@ -16,7 +16,6 @@
     "p-min-delay": "^4.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0",
-    "react-card-rotate-swiper": "^0.0.14",
     "react-chartist": "^0.14.4",
     "react-chartjs-2": "^3.2.0",
     "react-dom": "^17.0.2",
@@ -26,9 +25,8 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-stack-cards": "^1.0.8",
-    "react-tinder-card": "^1.4.5",
     "react-toastify": "^8.0.3",
-    "swiper": "^7.2.0",
+    "swiper": "6.8.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

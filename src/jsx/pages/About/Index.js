@@ -9,6 +9,7 @@ import "react-multi-carousel/lib/styles.css";
 import { trade, lineData } from "./demo.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 ////Images
 import farmeFirst from "../../../images/farme-1.png";
 import farmeSec from "../../../images/frame-2.png";
@@ -20,6 +21,7 @@ import navIcon from "../../../images/nav.png";
 import greyDot from "../../../images/dot-grey.png";
 import { createChart } from "lightweight-charts";
 var chart = null;
+
 class Index extends Component {
     constructor(props) {
         super(props);
@@ -204,7 +206,7 @@ class Index extends Component {
 
     doSpeicalThing = (e) => {
         let roadMap = this.state.roadMap
-      
+
         if (e == 0) {
             roadMap[0].is_active = true
             roadMap[1].is_active = false
