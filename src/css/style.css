@@ -142,9 +142,11 @@ body {
 }
 #video-frame video {
   width: 100%;
-  height: 550px;
 }
-
+#video-frame  {
+  width: 100%;
+  min-height: 550px;
+}
 .video-play-button {
   position: absolute;
   z-index: 10;

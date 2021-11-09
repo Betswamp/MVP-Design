@@ -24,6 +24,7 @@ import segaImage from "../../../images/sega.png";
 import xboxImage from "../../../images/xbox.png";
 import psImage from "../../../images/ps.png";
 import chartImage from "../../../images/chart.png";
+import VideoPlayer from './VideoPlayer';
 import SwipeCard from './SwipeCard';
 const SalesChart = loadable(() =>
     pMinDelay(import("../../components/Chart/SalesChart"), 1000)
@@ -32,6 +33,7 @@ class Index extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            playClick: false,
             responsive: {
                 superLargeDesktop: {
                     // the naming can be any, depends on you.
@@ -112,12 +114,17 @@ class Index extends Component {
         }
         return items;
     };
-
+    handelVideo = () => {
+        let playClick = this.state.playClick
+        this.setState({
+            playClick: (playClick) ? false : true
+        })
+    }
     render() {
         return (
             <Fragment>
                 <Header />
-              
+
                 <div className="container-fluid px-md-5" id="section-home">
                     <div className="space-100"></div>
                     <div className="row  mx-md-5  px-md-5">
@@ -147,7 +154,7 @@ class Index extends Component {
                             data-aos="zoom-in-up"
                             data-aos-easing="linear"
                         >
-                              <SwipeCard />
+                            <SwipeCard />
                             {/* <img src={TopImage} className="img-fluid my-5 my-md-0" /> */}
                         </div>
                     </div>
@@ -209,17 +216,13 @@ class Index extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid px-md-5" id="section-analytics">
-                    <div className="row py-5">
-                        <div className="col-lg-12 position-relative" id="video-frame">
-                            <video poster="placeholder.png" controls={false}>
-                                <source src="movie.mp4" type="video/mp4" />
-                                <source src="movie.ogg" type="video/ogg" />
-                            </video>
-                            <a id="play-video" className="video-play-button " href="#">
+                <div className="container-fluid px-md-1 py-sm-5" id="section-analytics">
+                    <div className="position-relative " id="video-frame">
+                        {(this.state.playClick) ? <VideoPlayer /> : ""}
+                        {(this.state.playClick) ? " " :
+                            <NavLink id="play-video" className="video-play-button " to="#" onClick={() => this.handelVideo()}>
                                 <span></span>
-                            </a>
-                        </div>
+                            </NavLink>}
                     </div>
                 </div>
                 <div className="container-fluid px-md-5" id="section-statistics">
