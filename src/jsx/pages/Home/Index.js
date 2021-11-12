@@ -24,8 +24,7 @@ import segaImage from "../../../images/sega.png";
 import xboxImage from "../../../images/xbox.png";
 import psImage from "../../../images/ps.png";
 import chartImage from "../../../images/chart.png";
-import VideoPlayer from './VideoPlayer';
-import SwipeCard from './SwipeCard';
+
 const SalesChart = loadable(() =>
     pMinDelay(import("../../components/Chart/SalesChart"), 1000)
 );
@@ -33,7 +32,6 @@ class Index extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            playClick: false,
             responsive: {
                 superLargeDesktop: {
                     // the naming can be any, depends on you.
@@ -114,22 +112,17 @@ class Index extends Component {
         }
         return items;
     };
-    handelVideo = () => {
-        let playClick = this.state.playClick
-        this.setState({
-            playClick: (playClick) ? false : true
-        })
-    }
+
     render() {
         return (
             <Fragment>
                 <Header />
-
-                <div className="container-fluid px-md-5" id="section-home">
+                <div className="container mb-5 mb-md-0" id="section-home">
                     <div className="space-100"></div>
-                    <div className="row  mx-md-5  px-md-5">
+                    <div className="space-100"></div>
+                    <div className="row">
                         <div
-                            className="col-lg-8 col-md-7 col-sm-12 mt-md-5"
+                            className="col-lg-8 col-md-7 col-sm-12"
                             data-aos="zoom-in-up"
 
                             data-aos-easing="linear"
@@ -138,11 +131,11 @@ class Index extends Component {
                                 Decentralized <br />
                                 <span>Peer-to-Peer Betting</span>
                             </h2>
-                            <p className="mt-4 mt-md-5 text-white text-center text-md-start">
+                            <p className="mt-5 mt-md-4 text-white text-center text-md-start">
                                 Create events on litrally anything verifiable and place
                                 unlimited bets.{" "}
                             </p>
-                            <div className="text-center text-md-start my-5 my-md-0">
+                            <div className="text-center text-md-start my-4 my-md-0">
                                 <NavLink
                                     to="/app"
                                     className="btn btn-md theam-bg-red mt-2 mt-md-5 homeTopBtn"
@@ -150,15 +143,13 @@ class Index extends Component {
                             </div>
                         </div>
                         <div
-                            className="col-lg-4 col-md-5 col-sm-12 text-center homeTopImage position-relative"
+                            className="col-lg-4 col-md-5 col-sm-12 text-center homeTopImage"
                             data-aos="zoom-in-up"
                             data-aos-easing="linear"
                         >
-                            <SwipeCard />
-                            {/* <img src={TopImage} className="img-fluid my-5 my-md-0" /> */}
+                            <img src={TopImage} className="img-fluid my-5 my-md-0" />
                         </div>
                     </div>
-                    <div className="space-100"></div>
                 </div>
                 <div className="container-fluid px-md-5" id="section-analytics">
                     <p className="mt-2 mt-md-4 text-white px-2 px-md-4 pb-4 div-p">
@@ -216,13 +207,17 @@ class Index extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid px-md-1 py-sm-5" id="section-analytics">
-                    <div className="position-relative " id="video-frame">
-                        {(this.state.playClick) ? <VideoPlayer /> : ""}
-                        {(this.state.playClick) ? " " :
-                            <NavLink id="play-video" className="video-play-button " to="#" onClick={() => this.handelVideo()}>
+                <div className="container-fluid px-md-5" id="section-analytics">
+                    <div className="row py-5">
+                        <div className="col-lg-12 position-relative" id="video-frame">
+                            <video poster="placeholder.png" controls={false}>
+                                <source src="movie.mp4" type="video/mp4" />
+                                <source src="movie.ogg" type="video/ogg" />
+                            </video>
+                            <a id="play-video" className="video-play-button " href="#">
                                 <span></span>
-                            </NavLink>}
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div className="container-fluid px-md-5" id="section-statistics">
