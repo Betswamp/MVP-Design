@@ -1,6 +1,7 @@
 
 import { envdev } from './environments';
 import { USDT_ABI } from './../Contract/USDT';
+import { BETS_ABI } from './../Contract/BetswampMVP';
 import { getContract, getAccount } from './web3';
 import { toUrl, fromWei } from './utils';
 
@@ -8,6 +9,12 @@ import usdtImage from './../images/Binance USD (BUSD).svg';
 
 export const getUSDTContract = async () => {
     const usdtContract = await getContract(USDT_ABI, envdev.REACT_APP_USDT_SMART_CONTRACT);
+    console.log('usdtcontract')
+    return usdtContract;
+}
+
+export const getMVPContract = async () => {
+    const usdtContract = await getContract(BETS_ABI, envdev.REACT_APP_BETSWAMP_MVP_CONTRACT);
     return usdtContract;
 }
 

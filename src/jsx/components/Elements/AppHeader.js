@@ -3,7 +3,7 @@ import arrowDown from "../../../images/arrow-down.png";
 import myBet from "../../../images/my-bet.png";
 import greenArrow from "../../../images/green-arrow.png";
 import { NavLink } from "react-router-dom";
-import { initInstance, loginProcess, disconnectWallet, getAccount } from './../../../web3/web3';
+import { initInstance, loginProcess, disconnectWallet, getAccount } from './../../..//web3/web3';
 import { getUSDTBalance, addUSDT } from './../../../web3/usdtService';
 import { addBETS, getBETBalance } from './../../../web3/betsService';
 
@@ -132,7 +132,7 @@ class AppHeader extends Component {
                   </li>
                   <li className="nav-item px-2">
                     <NavLink className="nav-link text-white" to="#" onClick={() => this.showMyBet()}>
-                      My Bet 
+                      My Bet
                       <img
                         src={myBet}
                         width="40px"

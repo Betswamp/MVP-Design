@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import GameCard from "../../components/Cards/GameCard";
 import AppHeader from "../../components/Elements/AppHeader";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 //images
 import monotone_soccer from "../../../images/emojione-monotone_soccer-ball.png";
 import park_rugby from "../../../images/icon-park_rugby.png";
@@ -22,7 +22,7 @@ class Index extends Component {
     };
   }
   componentDidMount = () => { 
-    
+    console.log(this.props)
   };
 
 //   getGameCard = () => {
@@ -64,9 +64,9 @@ class Index extends Component {
           <p className="mt-2 mt-md-4 text-white">#Sports</p>
           <div className="nav-scroller-games">
             <div className="d-flex mt-2 mt-md-4 games-scroll">
-
+          <ul><li>
               <div className="pe-2 pe-md-5">
-                <NavLink to='/app' style={{textDecoration:"none"}}>
+                <Link to='/app' style={{textDecoration:"none"}}>
                 <div
                   className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 1 ? "active" : ""
                     }`}
@@ -85,11 +85,11 @@ class Index extends Component {
                     Soccer
                   </p>
                 </div>
-                </NavLink>
+                </Link>
               </div>
-
+            </li></ul>
               <div className="pe-2 pe-md-5">
-                <NavLink to='/app/rugby' style={{textDecoration:"none"}}>
+                <NavLink to='/rugby' style={{textDecoration:"none"}}>
                 <div
                   className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 2 ? "active" : ""
                     }`}
@@ -111,7 +111,7 @@ class Index extends Component {
               </div>
 
               <div className="pe-2 pe-md-5">
-                <NavLink to='/app/tennis' style={{textDecoration:"none"}}>
+                <NavLink to='/tennis' style={{textDecoration:"none"}}>
                 <div
                   className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 3 ? "active" : ""
                     }`}
@@ -133,7 +133,7 @@ class Index extends Component {
               </div>
 
               <div className="pe-2 pe-md-5">
-                <NavLink to='/app/racing' style={{textDecoration:"none"}}>
+                <NavLink to='/racing' style={{textDecoration:"none"}}>
                 <div
                   className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 4 ? "active" : ""
                     }`}
@@ -148,14 +148,14 @@ class Index extends Component {
                     aria-expanded="false"
                     aria-controls="collapseRacing"
                   >
-                    F1 Racing
+                    Hockey
                   </p>
                 </div>
                 </NavLink>
               </div>
 
               <div className="pe-2 pe-md-5">
-                <NavLink to='/app/boxing' style={{textDecoration:"none"}}>
+                <NavLink to='/boxing' style={{textDecoration:"none"}}>
                 <div
                   className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 5 ? "active" : ""
                     }`}
@@ -177,7 +177,7 @@ class Index extends Component {
               </div>
 
               <div className="pe-2 pe-md-5">
-                <NavLink to='/app/basketball' style={{textDecoration:"none"}}>
+                <NavLink to='/basketball' style={{textDecoration:"none"}}>
                 <div
                   className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 6 ? "active" : ""
                     }`}
@@ -199,7 +199,7 @@ class Index extends Component {
               </div>
 
               <div className="pe-2 pe-md-5">
-                <NavLink to='/app/baseball' style={{textDecoration:"none"}}>
+                <NavLink to='/baseball' style={{textDecoration:"none"}}>
                 <div
                   className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 7 ? "active" : ""
                     }`}
@@ -221,7 +221,7 @@ class Index extends Component {
               </div>
 
               <div className="pe-2 pe-md-5">
-                <NavLink to='/app/cricket' style={{textDecoration:"none"}}>
+                <NavLink to='/cricket' style={{textDecoration:"none"}}>
                 <div
                   className={`text-center tab-view-card p-3 ${this.state.activeTabTop == 8 ? "active" : ""
                     }`}
