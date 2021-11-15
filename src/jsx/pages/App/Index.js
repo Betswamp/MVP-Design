@@ -93,13 +93,13 @@ class Index extends Component {
 
             <Switch>
               <Route exact path="/app" component={Soccer} />
-              <Route exact path="/app/rugby" component={Rugby} />
-              <Route exact path="/app/tennis" component={Tennis} />
-              <Route exact path="/app/racing" component={Racing} />
-              <Route exact path="/app/boxing" component={Boxing} />
-              <Route exact path="/app/basketball" component={Basketball} />
-              <Route exact path="/app/baseball" component={Baseball} />
-              <Route exact path="/app/cricket" component={Cricket} />
+              <Route exact path="/rugby" component={Rugby} />
+              <Route exact path="/tennis" component={Tennis} />
+              <Route exact path="/racing" component={Racing} />
+              <Route exact path="/boxing" component={Boxing} />
+              <Route exact path="/basketball" component={Basketball} />
+              <Route exact path="/baseball" component={Baseball} />
+              <Route exact path="/cricket" component={Cricket} />
             </Switch>
           </div>
           </BrowserRouter>

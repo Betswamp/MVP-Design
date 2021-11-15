@@ -7,6 +7,7 @@ import Home from '../jsx/pages/Home/Index';
 import App from '../jsx/pages/App/Index';
 import Admin from '../jsx/pages/Admin/Index';
 import About from '../jsx/pages/About/Index';
+import Tennis from './../jsx/pages/Categories/Tennis'
 class Web extends Component {
     render() {
         return (
@@ -34,6 +35,7 @@ class Web extends Component {
                             path="/about"
                             component={About}
                         />
+                        
                     </Switch>
                 </BrowserRouter>
             </>
