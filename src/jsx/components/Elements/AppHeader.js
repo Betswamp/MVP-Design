@@ -3,38 +3,16 @@ import arrowDown from "../../../images/arrow-down.png";
 import myBet from "../../../images/my-bet.png";
 import greenArrow from "../../../images/green-arrow.png";
 import { NavLink } from "react-router-dom";
-import { initInstance, loginProcess, disconnectWallet, getAccount } from './../../../web3/web3';
-import { getUSDTBalance, addUSDT } from './../../../web3/usdtService';
-import { addBETS, getBETBalance } from './../../../web3/betsService';
-
 class AppHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {
       myBetTab: 1,
       showMyBet: false,
-      showMyBetHistory: false,
-      balanceofUSDT: 0,
-      acc: null,
-      balanceBET: 0,
+      showMyBetHistory: false
     }
   }
-
-  componentDidMount = async () => { 
-
-    await initInstance();
-    await loginProcess();
-    let balanceofUSD = await getUSDTBalance();
-    let account = await getAccount();
-    let balanceofBET = await getBETBalance();
-    this.setState({
-      balanceofUSDT: balanceofUSD,
-      acc:account,
-      balanceBET: balanceofBET
-    });
-    console.log("USDT balance", balanceofUSD)
-    console.log("BETS balance", balanceofBET)
-  };
+  componentDidMount = () => { };
 
   setHistory = () => {
     let items = [];
@@ -132,7 +110,7 @@ class AppHeader extends Component {
                   </li>
                   <li className="nav-item px-2">
                     <NavLink className="nav-link text-white" to="#" onClick={() => this.showMyBet()}>
-                      My Bet 
+                      My Bet
                       <img
                         src={myBet}
                         width="40px"

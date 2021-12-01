@@ -8,16 +8,13 @@ class GameCard extends Component {
     super(props);
   }
 
-  componentDidMount = () => {
-    
-  };
+  componentDidMount = () => {};
 
   handelSideMenu = () => {
     document.getElementById('sidebar').style.display = 'block'
   };
 
   render() {
-    console.log("game card received", this.props.selectedcat)
     return (
       <Fragment>
         <div className="card game-card overflow-hidden">
