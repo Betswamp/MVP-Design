@@ -2,7 +2,9 @@ import React, { Component, Fragment } from "react";
 import AppHeader from "../../components/Elements/AppHeader";
 import AOS from "aos";
 import "aos/dist/aos.css";
-//images
+import {initInstance} from './../../../web3/web3'
+import {createEvent} from './../../../web3/betsMVPService'
+
 import arrow_down from "../../../images/arrow-down.png";
 
 class Index extends Component {
@@ -12,9 +14,16 @@ class Index extends Component {
       activeTabTop: 1,
       is_create: true,
       handelToggle: false,
+      time:0,
+      endtime:0,
+      sub_category:'',
+      event1:'',
+      event2:'',
+      name:''
     };
   }
-  componentDidMount = () => {
+  componentDidMount = async() => {
+    await initInstance();
     AOS.init();
   };
 
@@ -36,6 +45,20 @@ class Index extends Component {
       handelToggle: handelToggle ? false : true,
     });
   };
+
+  Onsubmit = async(event) => {
+    event.preventDefault();
+    console.log("create event", this.state.sub_category, this.state.time, this.state.endtime, this.state.name, this.state.event1, this.state.event2)
+    const Event = {
+      sub_category: this.state.sub_category,
+      name: this.state.name,
+      time: this.state.time,
+      endTime: this.state.endtime,
+      event1: this.state.event1,
+      event2: this.state.event2,
+    }
+    await createEvent(Event);
+  }
 
   render() {
     return (
@@ -70,7 +93,7 @@ class Index extends Component {
               <div className="match-main-div">
                 <div className="theam-bg-dark mt-5 mt-md-5 p-1 p-md-5">
                   {this.state.activeTabTop == 1 ? (
-                    <form className="admin-form">
+                    <form className="admin-form" onSubmit={this.Onsubmit}>
                       {this.state.is_create ? (
                         <>
                           <div className="mb-3 mb-md-5 maindiv">
@@ -81,6 +104,8 @@ class Index extends Component {
                               type="text"
                               className="form-control"
                               id="category"
+                              value={this.state.sub_category} 
+                              onChange={(e) => this.setState({sub_category:e.target.value})}
                               aria-describedby=""
                             />
                           </div>
@@ -92,51 +117,71 @@ class Index extends Component {
                               type="text"
                               className="form-control"
                               id="Event"
+                              value={this.state.name} 
+                              onChange={(e) => this.setState({name:e.target.value})}
                               aria-describedby=""
                             />
                           </div>
                           <div className="mb-3 mb-md-5 maindiv">
                             <label for="Start_date" className="form-label">
-                              Start date
+                              Start Time
                             </label>
                             <input
-                              type="date"
                               className="form-control"
                               id="Start_date"
+                              type="number"
+                              value={this.state.time} 
+                              onChange={(e) => this.setState({time:e.target.value})}
+                              placeholder="In unix fomate"
                               aria-describedby=""
                             />
                           </div>
                           <div className="mb-3 mb-md-5 position-relative maindiv">
                             <label for="odd_1" className="form-label">
-                              odd 1
+                              End Time
                             </label>
-                            <select className="form-control">
-                              <option></option>
-                            </select>
-                            <img src={arrow_down} />
+                            <input
+              
+                              className="form-control"
+                              id="Start_date"
+                              type="number"
+                              value={this.state.endtime} 
+                              onChange={(e) => this.setState({endtime:e.target.value})}
+                              placeholder="In unix fomate"
+                              aria-describedby=""
+                            />
                           </div>
                           <div className="mb-3 mb-md-5 position-relative maindiv">
                             <label for="odd_2" className="form-label">
-                              odd 2
+                              Event one
                             </label>
-                            <select className="form-control">
-                              <option></option>
-                            </select>
-                            <img src={arrow_down} />
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="Start_date"
+                              value={this.state.event1} 
+                              onChange={(e) => this.setState({event1:e.target.value})}
+                              aria-describedby=""
+                            />
                           </div>
                           <div className="mb-3 mb-md-5 position-relative maindiv">
                             <label for="odd_3" className="form-label">
-                              odd 3
+                              Event Two
                             </label>
-                            <select className="form-control">
-                              <option></option>
-                            </select>
-                            <img src={arrow_down} />
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="Start_date"
+                              value={this.state.event2} 
+                              onChange={(e) => this.setState({event2:e.target.value})}
+                              aria-describedby=""
+                            />
                           </div>
                           <div className="mb-3 mb-md-5 ">
                             <button
                               className="btn"
-                              onClick={() => this.createPreview()}
+                              type='submit'
+                              
                             >
                               Preview
                             </button>
@@ -258,7 +303,7 @@ class Index extends Component {
                               ) : (
                                 <button
                                   className="btn button-1"
-                                  onClick={() => this.handelToggle()}
+                                  
                                 >
                                   validate
                                 </button>

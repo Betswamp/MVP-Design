@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import greenDot from './../../../images/green-dot.png'
 import cardBackground from './../../../images/ground.png'
 import carbon_timer from './../../../images/carbon_timer.png'
-import { getActiveEvents, getEvent, placeBet } from './../../../web3/betsMVPService'
+import { getActiveEvents, getEvent, placeBet, getBETMVPContract } from './../../../web3/betsMVPService'
 import { initInstance } from './../../../web3/web3'
 import redDot from './../../../images/red-dot.png'
 import { event } from 'jquery'
@@ -99,13 +99,25 @@ class GameCard extends Component {
   }
 
   placebet = async(id, team, amount) => {
-    let ID = parseInt(id)
-    let TEAM = parseInt(team)
-    let AMOUNT = parseInt(amount)
-    console.log('selection int',ID, TEAM, AMOUNT);
-    // let ret = await placeBet(ID, TEAM, AMOUNT);
-    console.log('placebet')
+    const betdata = {
+      event_id: id,
+      amount: parseInt(amount),
+      occured: parseInt(team)
+    }
+    id = parseInt(id)
+    team = parseInt(team)
+    amount = parseInt(amount)
+    try { 
+    console.log('selection int',betdata);
+    // let betcontract = await getBETMVPContract();
+    // await betcontract.methods.placeBet(id,amount,team).call();
+    let ret = await placeBet(betdata);
+    console.log('placebet', ret)
   }
+    catch(error){
+        console.log(error)
+    }
+}
 
 
   render() {

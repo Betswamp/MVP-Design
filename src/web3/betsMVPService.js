@@ -30,23 +30,25 @@ export const getSubCategory = async () => {
     return subCategories;
 }
 
-export const createEvent = async (event) => {
+export const createEvent = async ({sub_category, name, time, endTime, event1, event2 }) => {
     const betMVPContract = await getBETMVPContract();
-    let time = strTimeToInt(event.time);
-    let endTime = strTimeToInt(event.endTime);
-
-    var getData = await betMVPContract.methods.createEvent('0x0', event.sub_category, event.name, time, endTime, event.event1, event.event2);
+    // let time = strTimeToInt(Event.time);
+    // let endTime = strTimeToInt(Event.endTime);
+    console.log("lengh",sub_category, name, time, endTime, event1, event2)
+    var getData = await betMVPContract.methods.createEvent('0x0', sub_category, name, time, endTime, event1, event2);
     let data = getData.encodeABI()
     await web3Instance.eth.sendTransaction({to: envdev.REACT_APP_BETSWAMP_MVP_CONTRACT, from: await getAccount(), data: data});
 }
 
-export const placeBet = async (event_id, amount, occured) => {
+export const placeBet = async ({event_id, amount, occured}) => {
     const betMVPContract = await getBETMVPContract();
     // const result = await betMVPContract.methods.placeBet(0x4, 0x100, 0x0).call();
     // return result;
+    console.log("length ",event_id, amount, occured)
     var getData = await betMVPContract.methods.placeBet(event_id, amount, occured).call({'from': await getAccount()});
-    let data = getData.encodeABI()
-    return await web3Instance.eth.sendTransaction({to: envdev.REACT_APP_BETSWAMP_MVP_CONTRACT, from: await getAccount(), data: data});
+    console.log('getdata',getData)
+    // let data = getData.encodeABI()
+    // return await web3Instance.eth.sendTransaction({to: envdev.REACT_APP_BETSWAMP_MVP_CONTRACT, from: await getAccount(), data: data});
 }
 
 export const validateEvent = async (event_id, occured) => {

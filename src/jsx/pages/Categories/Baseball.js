@@ -99,12 +99,24 @@ class GameCard extends Component {
   }
 
   placebet = async(id, team, amount) => {
-    let ID = parseInt(id)
-    let TEAM = parseInt(team)
-    let AMOUNT = parseInt(amount)
-    console.log('selection int',ID, TEAM, AMOUNT);
-    // let ret = await placeBet(ID, TEAM, AMOUNT);
-    console.log('placebet')
+    const betdata = {
+      event_id: id,
+      amount: parseInt(amount),
+      occured: parseInt(team)
+    }
+    id = parseInt(id)
+    team = parseInt(team)
+    amount = parseInt(amount)
+    try { 
+    console.log('selection int',betdata);
+    // let betcontract = await getBETMVPContract();
+    // await betcontract.methods.placeBet(id,amount,team).call();
+    let ret = await placeBet(betdata);
+    console.log('placebet', ret)
+  }
+    catch(error){
+        console.log(error)
+    }
   }
 
 
